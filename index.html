@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
@@ -15,19 +15,25 @@
 <body>
     <div class="container" id="root">
        <div id="a" class="d-flex justify-content-center align-items-center">
-           <div class="col-1 d-flex justify-content-center align-items-center" @click="previousImage()">
+
+        <!-- COLONNA SINISTRA  -->
+        <div class="col-1 d-flex justify-content-center align-items-center colonna" @click="previousImage()">
             <i class="fas fa-chevron-left"></i>
-           </div>
+        </div>
 
+        <!-- COLONNA CENTRALE  -->
+        <div class="col-6 d-flex justify-content-center align-items-center colonna" id="image_container">
+            <img :src="images[imageIndex].src" >
+            
+            <div id="navigation">
+                <i class="fas fa-circle" v-for='image in images'></i>
+            </div>
+        </div>
 
-           <div class="col-6 d-flex justify-content-center align-items-center">
-               <img :src="images[imageIndex].src" >
-           </div>
-
-
-           <div class="col-1 d-flex justify-content-center align-items-center" @click="nextImage()">
+        <!-- COLONNA DESTRA  -->
+        <div class="col-1 d-flex justify-content-center align-items-center colonna" @click="nextImage()">
             <i class="fas fa-chevron-right"></i>
-           </div>
+        </div>
 
        </div>
     </div>
