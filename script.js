@@ -23,6 +23,7 @@ var root = new Vue(
             imageIndex: 0,
         },
         methods:{
+            // funzione per andare avanti con l'immagine 
             nextImage: function(){
                 this.imageIndex++;
 
@@ -32,6 +33,7 @@ var root = new Vue(
                     this.imageIndex = 0;
                 }
             },
+            // funzione per andare indietro con l'immagine 
             previousImage: function(){
                 this.imageIndex--;
 
@@ -40,7 +42,6 @@ var root = new Vue(
                 if(this.imageIndex < 0){
                     this.imageIndex = this.images.length - 1;
                 }
-                
             }
             
         }
