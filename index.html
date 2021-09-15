@@ -26,7 +26,7 @@
             <img :src="images[imageIndex].src" >
             
             <div id="navigation">
-                <i class="fas fa-circle" v-for='image in images'></i>
+                <i class="fas fa-circle" :class="(index == imageIndex) ? 'active' : '' "v-for='(image, index) in images'></i>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
         <div class="col-1 d-flex justify-content-center align-items-center colonna" @click="nextImage()">
             <i class="fas fa-chevron-right"></i>
         </div>
-
+        
        </div>
     </div>
     <script type="text/javascript" src="script.js"></script>

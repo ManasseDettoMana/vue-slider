@@ -20,18 +20,16 @@ div img{
 }
 #navigation{
     position: absolute;
-    bottom: 1%;
-    left: 50;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    width: 200px;
-    justify-content: space-around;
-    height: 30px;
+    padding:10px;
 }
 #navigation i{
-    
-    text-align: center;
     color: white;
+    margin-left: 15px;
+}
+#navigation i.active{
+    color: violet;
 }
